@@ -1,18 +1,55 @@
-/* Este es un comentario */
-/* Estilos para el cuerpo de la página */
+/* Comentario: Estilos combinados con nesting y animaciones */
 body {
     font-family: 'Times New Roman', Times, serif;
-    margin: 0;
-    padding: 0;
+    margin: 20px;
+    line-height: 1.6;
     background: linear-gradient(135deg, #46e7d1, #db61f0);
-}
-
-/* Estilo para los encabezados h1 */
-h1 {
+  
+    /* Nesting example */
+    section {
+      margin: 20px;
+      padding: 20px;
+      border-radius: 8px;
+      /* Animación de aparición */
+      animation: fadeIn 1s ease-in-out;
+  
+      /* Ejemplo de anidación para h3 dentro de section */
+      h3 {
+        color: #444;
+        font-size: 1.2em;
+        margin-bottom: 10px;
+      }
+    }
+  
+    /* Ejemplo de clase anidada en body para destacarlo */
+    &.highlight {
+      background-color: #ffe4b5;
+    }
+  }
+  
+  /* Animaciones claveframes */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Encabezado principal con efecto hover */
+  h1 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
     color: #333;
-    text-align: center;
-    margin-top: 20px;
-}
+    transition: color 0.3s ease;
+  }
+  
+  h1:hover {
+    color: #f39c12; /* Cambio de color con transición */
+  }
 
 /* Estilo para las secciones */
 .section-turquoise {
